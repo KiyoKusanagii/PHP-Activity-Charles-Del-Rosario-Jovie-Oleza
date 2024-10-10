@@ -1,0 +1,85 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffe6f2; /* Light pink background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center items */
+    margin: 50px auto;
+    width: 90%; /* Slightly wider container */
+}
+
+.form-container {
+    width: 50%; /* Set width for the form */
+    max-width: 600px; /* Maximum width to keep it from getting too wide */
+    padding: 30px; /* Increased padding for more space */
+    background-color: #ffccf2; /* Soft violet-pink background */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.form-container:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+h2 {
+    text-align: center;
+    color: #ff69b4; /* Hot pink color */
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 20px; /* Spacing below heading */
+}
+
+label {
+    display: block;
+    margin-top: 20px; /* Increased margin */
+    font-size: 18px; /* Increased font size */
+    color: #990099; /* Violet color */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px; /* Reduced padding for input fields */
+    margin-top: 10px; /* Increased margin */
+    border: 2px solid #ff99cc; /* Pink border */
+    border-radius: 10px;
+    font-size: 16px; /* Increased font size */
+    background-color: #fff0f5; /* Light lavender-pink background */
+    transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #ff66b2; /* Deeper pink for focus */
+}
+
+input[type="submit"] {
+    background-color: #ff66b2; /* Vibrant pink */
+    color: white;
+    border: none;
+    margin-top: 25px; /* Increased margin */=
+    padding: 15px; /* Increased padding */
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+input[type="submit"]:hover {
+    background-color: #ff3385; /* Slightly darker pink on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+textarea {
+    height: 100px; /* Reduced height for textarea */
+    resize: none;
+    transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+input:disabled {
+    background-color: #f2f2f2; /* Light gray for disabled input */
+    cursor: not-allowed;
+}

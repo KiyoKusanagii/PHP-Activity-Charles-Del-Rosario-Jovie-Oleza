@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - Girly Theme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Contact Form</h2>
+            <form action="process.php" method="POST" onsubmit="return validateForm()">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required><br>
+
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required><br>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required><br>
+
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" name="contact" required><br>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <div class="list-container">
+        <h2>Submissions</h2>
+        <?php include 'process.php'; ?>
+    </div>
+
+    <script>
+        function validateForm() {
+            let age = document.getElementById("age").value;
+            if (age <= 0) {
+                alert("Age must be a positive number.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
